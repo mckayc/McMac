@@ -96,12 +96,12 @@ CASKS=(
     vlc
 )
 
-echo "Installing Google Fonts"
-curl https://raw.githubusercontent.com/qrpike/Web-Font-Load/master/install.sh | sh
+echo "Installing cask apps..."
+brew cask install ${CASKS[@]}
 
-#echo "Installing cask apps..."
-#brew cask install ${CASKS[@]}
-#
+echo "Installing Google Fonts"
+curl https://raw.githubusercontent.com/qrpike/Web-Font-Load/master/install.sh | sh\
+
 #echo "Installing fonts..."
 #brew tap caskroom/fonts
 #FONTS=(
