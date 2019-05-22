@@ -2,7 +2,7 @@
 # 
 # Bootstrap script for setting up a new OSX machine
 # 
-# Raw https://raw.githubusercontent.com/mckayc/McMac/master/mcmac.sh
+# Run this command in a terminal: curl -O https://raw.githubusercontent.com/mckayc/McMac/master/mcmac.sh; bash mcmac.sh 
 #
 # This should be idempotent so it can be run multiple times.
 #
