@@ -23,14 +23,12 @@ fi
 brew update
 
 echo "Installing cask..."
-#brew install caskroom/cask/brew-cask
 
 CASKS=(
     darktable
     gimp
     inkscape
     blender
-    #audacity
     tunnelblick
     obs
     ultimaker-cura
