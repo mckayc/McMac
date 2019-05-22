@@ -22,63 +22,6 @@ fi
 # Update homebrew recipes
 brew update
 
-# Install GNU core utilities (those that come with OS X are outdated)
-brew tap homebrew/dupes
-brew install coreutils
-brew install gnu-sed --with-default-names
-brew install gnu-tar --with-default-names
-brew install gnu-indent --with-default-names
-brew install gnu-which --with-default-names
-brew install gnu-grep --with-default-names
-
-# Install GNU `find`, `locate`, `updatedb`, and `xargs`, g-prefixed
-brew install findutils
-
-# Install Bash 4
-brew install bash
-
-PACKAGES=(
-    ack
-    autoconf
-    automake
-    boot2docker
-    ffmpeg
-    gettext
-    gifsicle
-    git
-    graphviz
-    hub
-    imagemagick
-    jq
-    libjpeg
-    libmemcached 
-    lynx
-    markdown
-    memcached
-    mercurial
-    npm
-    pkg-config
-    postgresql
-    python
-    python3
-    pypy
-    rabbitmq
-    rename
-    ssh-copy-id
-    terminal-notifier
-    the_silver_searcher
-    tmux
-    tree
-    vim
-    wget
-)
-
-echo "Installing packages..."
-brew install ${PACKAGES[@]}
-
-echo "Cleaning up..."
-brew cleanup
-
 echo "Installing cask..."
 brew install caskroom/cask/brew-cask
 
@@ -98,18 +41,6 @@ CASKS=(
 
 echo "Installing cask apps..."
 brew cask install ${CASKS[@]}
-
-echo "Installing Google Fonts"
-curl https://raw.githubusercontent.com/qrpike/Web-Font-Load/master/install.sh | sh\
-
-#echo "Installing fonts..."
-#brew tap caskroom/fonts
-#FONTS=(
-#    font-inconsolidata
-#    font-roboto
-#    font-clear-sans
-#)
-#brew cask install ${FONTS[@]}
 
 echo "Configuring OSX..."
 
@@ -135,3 +66,8 @@ defaults write NSGlobalDomain com.apple.swipescrolldirection -bool false
 #[[ ! -d Workspace ]] && mkdir Workspace
 
 echo "Bootstrapping complete"
+
+echo "Installing Google Fonts"
+curl https://raw.githubusercontent.com/qrpike/Web-Font-Load/master/install.sh | sh\
+
+echo "Google Fonts installation complete"
