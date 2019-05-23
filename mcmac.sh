@@ -22,6 +22,9 @@ fi
 # Update homebrew recipes
 brew update
 
+echo "Installing OBS"
+brew cask install obs
+
 echo "Installing cask..."
 
 CASKS=(
